@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <script>
+       </script>
+   </head>
+<body>
+    <div>
+        <p class="score">15</p>
+    </div>
+    <script>
+        // cvladebis gamodzaxeba
+        // -------------------------------------------
+
+        let a = 1;
+        const b = 2;
+        const c = [1, 2, 3];
+        const d = { 
+            friends: {
+                first: "leo",
+                second: "gio"
+            }
+        };
+
+        for (let i = 0; i < 10; i++) {
+            break;
+        }
+
+        // funqciebis sheqmna
+        // -------------------------------------------
+
+        function foo(...params) {
+            const [a, b, c] = params;
+            return 1;
+        }
+
+        let someFunction = null;
+
+        if (true) {
+            someFunction = function() {
+                console.log(1);
+            }
+        } else {
+            someFunction = function() {
+                console.log(2);
+            }
+        }
+
+        someFunction();
+
+
+        // "arrow" funqciebis sheqmna
+        // -------------------------------------------
+
+        const arrowFunction = function(arrowFunctionDva) {
+            arrowFunctionDva();
+        };
+
+
+        
+        function sxvaFunqcia() {
+            console.log('sxva funqcia');
+        }
+        
+        arrowFunction(sxvaFunqcia);
+
+
+        // "es6" funqciebi 
+        // -------------------------------------------
+        const es6Function = () => {
+            console.log("es aris es6 funqcia")
+        }
+
+        es6Function();
+
+
+        // javascript is "built-in" funqciebi
+        // -------------------------------------------
+
+        const string = "   abs    ";
+        console.log(string.toUpperCase());
+
+        // winidan da uknidan space - ebis moshoreba
+        console.log(string.trim());
+
+        // edzebs pirveli aseti asos index - s da tu ver poulobs abrunebbs -1 -s 
+        console.log(string.indexOf('a'));
+        console.log(string.indexOf('f'));
+
+
+        // dinamiuradd shegidzlia cvalo tipi 
+        let abc = 1;
+        abc = {
+
+        }
+        abc = [];
+        abc = null;
+
+
+        const someArray = [1, 2, 3];
+        const elementTwo = someArray.find(item => {
+            return item === 2;
+        });
+
+
+        const arrayOfNumbers = [1, 2, 3, 4, 5];
+        const elementGreaterThan2 = arrayOfNumbers.find(function(number) {
+            return number > 2;
+        });
+        console.log(elementGreaterThan2);
+
+        console.log(elementTwo);
+
+        const someArrayOfObjects = [{name: "leo", age: 28}, {name: "lua", age:21}];
+        const element = someArrayOfObjects.find((obj) => {
+            return obj.age > 21;
+        });
+        console.log(element);
+        console.log(element.name);
+
+
+        const anotherArray = [1, 2, 3, 4, 5];
+        anotherArray.push(1);
+        const deletedEleemnt = anotherArray.pop();
+        console.log(deletedEleemnt);
+        console.log(anotherArray.length);
+
+        for (let element of anotherArray) {
+            console.log(element);
+        }
+
+        anotherArray.forEach((number) => {
+            console.log("masivis ricxvi aris: ", number);
+        })
+
+    </script>
+</body>
+</html>

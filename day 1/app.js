@@ -7,7 +7,19 @@
  * მაგალითად: A = [1, 2, 3];  B = [2, 3, 4];   getCommonMembers(A, B) = [2, 3]
  * 
  */
+function Task1(arrOne, arrTwo) {
+    let tmpArray = [];
+    arrOne.forEach(function (a) {
+        if (arrTwo.includes(a)) {
+            tmpArray.push(a);
+        }
+    })
 
+    return tmpArray;
+}
+let a = [1, 2, 3];
+let b = [2, 3, 4];
+console.log(Task1(a, b));
 
 /**
  * 
@@ -44,3 +56,37 @@
  * - ამოცანა უნდა დაიწეროს რეკურსიულად 
  * - მასივის თითოეულ წევრს აქვს ხის სტრუქტურა
  */
+
+ let tmpArray = [];
+function Task2(arrOfObjects) {
+    arrOfObjects.forEach(function (obj) {
+        if (obj.id) {
+            console.log(obj.id);
+            tmpArray.push(obj.id);
+        }
+        if (obj.children instanceof Array) {
+            Task2(obj.children);
+        }
+    })
+    return tmpArray;
+}
+
+const obj = [
+    {
+        id: 1,
+        value: "raime",
+        children: []
+    },
+    {
+        id: 2,
+        value: "sxva ragac",
+        children: [
+            {
+                id: 3,
+                value: "kidev sxva ragac",
+                children: []
+            }
+        ]
+    }
+]
+console.log( Task2(obj));
